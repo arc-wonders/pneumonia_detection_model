@@ -1,6 +1,6 @@
 
 
-# Pneumonia Detection from Chest X-rays — ResNet-50 (PyTorch)
+# Pneumonia Detection from Chest X-rays : ResNet-50 (PyTorch)
 
 > **Purpose.** Build and evaluate a binary classifier (PNEUMONIA vs NORMAL) on the Kaggle Chest X-ray dataset, with GPU-accelerated training, transparent evaluation, and deployment notes for a clinical-assistive workflow.
 
