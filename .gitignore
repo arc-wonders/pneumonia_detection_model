@@ -35,8 +35,6 @@ x-ray/
 torch_cache/
 wandb/
 lightning_logs/
-runs/
-runs_resnet50/
 __MACOSX/
 
 # -----------------------------

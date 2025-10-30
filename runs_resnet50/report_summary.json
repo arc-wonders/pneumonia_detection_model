@@ -1,0 +1,70 @@
+{
+  "preprocessing": {
+    "resize": "224x224",
+    "normalize": "ImageNet mean/std",
+    "augmentations": "RandomResizedCrop, small rotation, horizontal_flip=OFF"
+  },
+  "model": {
+    "arch": "ResNet50 (ImageNet pretrained), FC->1 logit",
+    "params": 23510081,
+    "loss": "BCEWithLogitsLoss(pos_weight=0.346)",
+    "mixed_precision_amp": true,
+    "tf32": true
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "scheduler": "OneCycleLR",
+    "epochs_requested": 60,
+    "best_epoch": 6,
+    "val_selected_threshold": 0.05
+  },
+  "dataset_counts": {
+    "train": 4434,
+    "val": 782,
+    "test": 624,
+    "train_class_counts": {
+      "NORMAL": 1140,
+      "PNEUMONIA": 3294
+    }
+  },
+  "validation_metrics_at_t*": {
+    "AUC": 0.9978164256171808,
+    "AP": 0.9992458889956566,
+    "F1": 0.9845890410958904,
+    "Precision": 0.979557069846678,
+    "Recall": 0.9896729776230815,
+    "Specificity": 0.9402985074580085,
+    "Accuracy": 0.9769820971867008,
+    "TP": 575,
+    "TN": 189,
+    "FP": 12,
+    "FN": 6,
+    "Threshold": 0.05
+  },
+  "test_metrics_at_t*": {
+    "AUC": 0.9806158229235152,
+    "AP": 0.9843482285520148,
+    "F1": 0.8549450549450549,
+    "Precision": 0.7480769230769231,
+    "Recall": 0.9974358974333399,
+    "Specificity": 0.4401709401690591,
+    "Accuracy": 0.7884615384615384,
+    "TP": 389,
+    "TN": 103,
+    "FP": 131,
+    "FN": 1,
+    "Threshold": 0.05
+  },
+  "calibration": {
+    "brier_val": 0.02512160134179794,
+    "brier_test": 0.06251202573527473
+  },
+  "asset_paths": {
+    "roc": "runs_resnet50\\report_assets\\roc.png",
+    "pr": "runs_resnet50\\report_assets\\pr.png",
+    "calibration": "runs_resnet50\\report_assets\\calibration.png",
+    "cm_val": "runs_resnet50\\report_assets\\cm_val.png",
+    "cm_test": "runs_resnet50\\report_assets\\cm_test.png",
+    "learning_curves": "runs_resnet50\\report_assets\\learning_curves.png"
+  }
+}
