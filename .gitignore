@@ -1,0 +1,85 @@
+# -----------------------------
+# Python & Environment
+# -----------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.env
+.env.*
+venv/
+x-ray/
+.DS_Store
+
+# -----------------------------
+# Jupyter / IPython
+# -----------------------------
+.ipynb_checkpoints/
+*.ipynb_meta.json
+*.ipynb_checkpoints/
+
+# -----------------------------
+# Logs / Temp / Caches
+# -----------------------------
+*.log
+*.tmp
+*.bak
+*.swp
+*.swm
+*.swo
+*.orig
+.cache/
+torch_cache/
+wandb/
+lightning_logs/
+runs/
+runs_resnet50/
+__MACOSX/
+
+# -----------------------------
+# Dataset folders
+# -----------------------------
+chest-xray-pneumonia/
+dataset/
+data/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# -----------------------------
+# Model outputs / checkpoints
+# -----------------------------
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.tflite
+*.npy
+*.npz
+*.h5
+*.joblib
+
+# -----------------------------
+# Generated results / figures
+# -----------------------------
+report_assets/
+plots/
+outputs/
+results/
+*.png
+*.jpg
+*.jpeg
+*.pdf
+
+# -----------------------------
+# IDE / OS files
+# -----------------------------
+.vscode/
+.idea/
+*.code-workspace
+Thumbs.db
+desktop.ini
